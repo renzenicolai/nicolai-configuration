@@ -1,6 +1,6 @@
 {
   "name": "nicolai-configuration",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A simple configuration file parsing library",
   "main": "index.js",
   "scripts": {
