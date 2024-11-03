@@ -28,6 +28,18 @@ class Configuration {
                 throw Error("Configuration parameter get called with invalid arguments");
             }
         }
+
+        //environment override check
+        let env_name="CONFIG"
+        for (let i = 0; i < arguments.length; i++) {
+            env_name=env_name+"_"+arguments[i].toUpperCase()
+        }
+        if (process.env[env_name] !== "")
+        {
+            return  process.env[env_name]
+        }
+
+
         let result = this._data;
         if (arguments.length > 0) {
             try {
